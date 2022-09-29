@@ -1,0 +1,30 @@
+Source: freehep-util
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders:
+ Giovanni Mascellani <gio@debian.org>,
+ Philipp Huebner <debalance@debian.org>
+Build-Depends:
+ debhelper (>= 10),
+ default-jdk,
+ maven-debian-helper
+Build-Depends-Indep:
+ junit,
+ libnb-org-openide-util-java
+Standards-Version: 4.1.1
+Vcs-Git: https://anonscm.debian.org/git/pkg-java/freehep/freehep-util.git
+Vcs-Browser: https://anonscm.debian.org/git/pkg-java/freehep/freehep-util.git
+Homepage: http://java.freehep.org/
+
+Package: libfreehep-util-java
+Architecture: all
+Depends: ${maven:Depends}, ${misc:Depends}
+Recommends: ${maven:OptionalDepends}
+Description: FreeHEP utility library
+ This library contains miscellaneous utility classes used in other
+ FreeHEP components, such as classes dealing with physical errors and
+ scientific notation, assertions, hash tables, option parsers and
+ others.
+ .
+ FreeHEP is a collection of Java libraries used in High Energy Physics.

@@ -1,0 +1,26 @@
+From: Giovanni Mascellani <gio@debian.org>
+Subject: Fix some differences in openide-util API
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: freehep-util/src/main/java/org/freehep/util/FreeHEPLookup.java
+===================================================================
+--- freehep-util.orig/src/main/java/org/freehep/util/FreeHEPLookup.java
++++ freehep-util/src/main/java/org/freehep/util/FreeHEPLookup.java
+@@ -1,7 +1,7 @@
+ package org.freehep.util;
+ 
+ import org.openide.util.Lookup;
+-import org.openide.util.MetaInfServicesLookup;
++import org.openide.util.lookup.Lookups;
+ import org.openide.util.lookup.AbstractLookup;
+ import org.openide.util.lookup.InstanceContent;
+ import org.openide.util.lookup.ProxyLookup;
+@@ -86,7 +86,7 @@ public class FreeHEPLookup extends Looku
+     */   
+    public void setClassLoader(ClassLoader loader)
+    {
+-      Lookup serviceLookup = new MetaInfServicesLookup(loader);
++      Lookup serviceLookup = Lookups.metaInfServices(loader);
+       proxy.setLookups(contentLookup, serviceLookup);
+    }
+    public Lookup.Result lookup(Lookup.Template template)

@@ -1,0 +1,78 @@
+freehep-util (2.0.2-7) unstable; urgency=medium
+
+  [ tony mancill ]
+  * Team upload.
+  * Remove Gabriele Giacone from Uploaders (Closes: #856754)
+
+  [ Giovanni Mascellani ]
+  * Bump Standards-Version to 4.1.1.
+  * Change priority to optional.
+  * Switch build system to debhelper 10.
+  * Reformat some fields in debian/control.
+
+ -- Giovanni Mascellani <gio@debian.org>  Sat, 04 Nov 2017 16:27:28 +0100
+
+freehep-util (2.0.2-6) unstable; urgency=medium
+
+  [ Giovanni Mascellani ]
+  * Remove obsolete lines from gbp.conf.
+  * Move package to priority extra.
+  * Use secure Vcs-* URLs.
+  * Bump Standards-Version to 3.9.8 (no changes required).
+  * Build with debhelper 9 instead of CDBS.
+  * Quit using topgit and remove leftovers.
+  * Remove trivial information in debian/README.source.
+  * Add classpath to the JAR manifest.
+  * Make patches DEP-3 compliant.
+
+  [ Philipp Huebner ]
+  * Added myself as uploader
+  * Updated Standards-Version: 3.9.6 (no changes needed)
+  * Updated VCS links
+  * Switched to source format 3.0 (quilt)
+  * Switched to Debhelper 9
+  * Updated debian/copyright and made it lintian clean
+
+ -- Giovanni Mascellani <gio@debian.org>  Thu, 21 Jul 2016 12:10:21 +0200
+
+freehep-util (2.0.2-5) unstable; urgency=low
+
+  * Add real watch file
+  * Fix my email address.
+  * Update dependency against libopenide-util-java to
+    libnb-org-openide-util-java (closes: #642556).
+  * Dropping patch for pom.xml, which new is modified using maven.rules.
+  * Fix a few lintian issues, particularly bumping Standard-Versions to
+    3.9.2 (no changes required).
+
+ -- Giovanni Mascellani <gio@debian.org>  Sun, 09 Oct 2011 11:13:44 +0200
+
+freehep-util (2.0.2-4) unstable; urgency=low
+
+  * Moved default-jdk from Build-Depends-Indep to Build-Depends
+
+ -- Gabriele Giacone <1o5g4r8o@gmail.com>  Thu, 04 Mar 2010 00:50:59 +0100
+
+freehep-util (2.0.2-3) unstable; urgency=low
+
+  * Description improved.
+  * debian/copyright: fixed
+  * Standards version bumped to 3.8.4.
+
+ -- Giovanni Mascellani <mascellani@poisson.phc.unipi.it>  Wed, 03 Feb 2010 11:28:12 +0100
+
+freehep-util (2.0.2-2) unstable; urgency=low
+
+  * debian/fake-poms.conf: deleted, now openide-util provides a POM
+  * Enabling compile time tests
+  * debian/control: typo in long description
+  * Switched to quilt and topgit patches over upstream code
+  * Adding Gabriele Giacone as comaintainer 
+
+ -- Giovanni Mascellani <mascellani@poisson.phc.unipi.it>  Fri, 04 Dec 2009 01:06:35 +0100
+
+freehep-util (2.0.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #554141)
+
+ -- Giovanni Mascellani <mascellani@poisson.phc.unipi.it>  Sun, 08 Nov 2009 22:18:30 +0100
